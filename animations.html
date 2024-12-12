@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animations</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#Button1").click(function(){
+                // alert ("test");
+                $("#WaxingC").animate({
+                    left: '+=100px',
+                });
+            });
+            $("#Button2").click(function(){
+                $("#HalfM").animate({
+                left: '+=100px',
+                });
+            });
+            $("#Button3").click(function(){
+                $("#FullM").animate({
+                    left: '+=100px',
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<button id="Button1">Move Waxing Cresent</button>
+<button id="Button2">Move Half Moon</button>
+<button id="Button3">Move Full Moon</button>
+<img style="bottom:500px; left:1700px; height:200px; width:200px;position:absolute;" src="img/WaxingC.webp" alt="Waxing Moon" id="WaxingC"/>
+<img style="bottom:150px; height:200px; width:200px;position:absolute;" src="img/HalfM.webp" alt="Waxing Moon" id="HalfM"/>
+<img style="height:200px; width:200px;position:absolute;" src="img/FullM.webp" alt="Waxing Moon" id="FullM"/>
+
+</div>
+
+</body>
+</html>
