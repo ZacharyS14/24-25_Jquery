@@ -5,23 +5,59 @@
     <title>Form Validation</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-
+      $(document).ready(function(){
+        $("#submit").click(function(){
+        if($("#fname").val().length === 0){
+          $("#fname").css({"background-color": "red"});
+          $("#fnameE").css({"display": "block"});
+        }
+        if($("#lname").val().length === 0){
+          $("#lname").css({"background-color": "red"});
+          $("#lnameE").css({"display": "block"});
+        }
+        if($("#dob").val().length === 0){
+          $("#dob").css({"background-color": "red"});
+          $("#dobE").css({"display": "block"});
+        }
+        if($("#street").val().length === 0){
+          $("#street").css({"background-color": "red"});
+          $("#streetE").css({"display": "block"});
+        }
+        if($("#city").val().length === 0){
+          $("#city").css({"background-color": "red"});
+          $("#cityE").css({"display": "block"});
+        }
+        if($("#zip").val().length === 0) {
+          $("#zip").css({"background-color": "red"});
+          $("#zipE").css({"display": "block"});
+        }
+        });
+      });
     </script>
 </head>
 <body>
 <form>
   <label for="fname">First Name</label>
-  <input type="text" name="fname" id="fname" /><br />
+  <input type="text" name="fname" id="fname" />
+  <div id="fnameE" style="display: none">Please enter your first name.</div>
+  <br />
   <label for="lname">Last Name</label>
-  <input type="text" name="lname" id="lname" /><br />
+  <input type="text" name="lname" id="lname" />
+  <div id="lnameE" style="display: none">Please enter your last name.</div>
+  <br />
   <label for="dob">DOB</label>
-  <input type="text" name="dob" id="dob" /><br />
+  <input type="text" name="dob" id="dob" />
+  <div id="dobE" style="display: none">Please enter your date of birth.</div>
+  <br />
   <label for="street">Street Address</label>
-  <input type="text" name="street" id="street" /><br />
+  <input type="text" name="street" id="street" />
+  <div id="streetE" style="display: none">Please enter your Street Address.</div>
+  <br />
   <label for="street2">Street 2</label>
   <input type="text" name="street2" id="street2" /><br />
   <label for="city">City</label>
   <input type="text" name="city" id="city" />
+  <div id="cityE" style="display: none">Please enter your City Name.</div>
   <label for="state">State</label>
   <select name="state" id="state">
     <option value="AL">Alabama</option>
@@ -77,7 +113,9 @@
     <option value="WY">Wyoming</option>
   </select>
   <label for="zip">Zip</label>
-  <input type="text" name="zip" id="zip" /><br />
+  <input type="text" name="zip" id="zip" />
+  <div id="zipE" style="display: none">Please enter your Zip Code.</div>
+  <br />
   <label for="phone">Phone</label>
   <input type="text" name="phone" id="phone" /><br />
   <label for="username">Username</label>
@@ -88,7 +126,7 @@
   <input type="text" name="password2" id="password2" /><br />
   <input type="checkbox" name="consent" id="consent">
   <label for="consent">I agree to receive every 2 seconds for your dumb products.</label><br />
-  <button type="submit" name="submit" id="submit">Submit</button>
+  <button type="button" name="submit" id="submit">Submit</button>
 </form>
 </body>
 </html>
